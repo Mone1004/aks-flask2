@@ -5,7 +5,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Server Host : in {}".format(platform.node())
+    sumtest=sum(range(10000000))
+    return "Server Host : in {}, sum = {}".format(platform.node(),sumtest)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
